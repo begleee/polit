@@ -331,6 +331,10 @@ main > img {
     gap: 2vw;
 }
 
+.container-text {
+    max-width: 28vw;
+}
+
 .list {
     list-style: none;
     border-radius: var(--border-rad);
@@ -358,19 +362,7 @@ main > img {
 }
 
 .swiper {
-    width: 400px;
-    height: 266px;
-}
-
-.swiper-wrapper {
-    width: 400px;
-    height: 266px;
-}
-
-.swiper-slide {
-    border-radius: 0 var(--border-rad) var(--border-rad) 0;
-    width: 400px;
-    height: 266px;
+    width: 35vw;
 }
 
 
