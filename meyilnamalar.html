@@ -12,11 +12,22 @@
     </style>
 </head>
 <body>
+
+    <div class="bg-shapes">
+        <span class="floating block" style="top: 150px; left: 1200px; animation-delay: -4.5s;"><img src="img/bg-shapes/Block_8x8x8_Super_Rounded.png" alt=""></span>
+        <span class="floating matrix" style="top: 200px; left: 70px;"><img src="img/bg-shapes/Block_Matrix_x3.png" alt=""></span>
+        <span class="floating cage" style="top: 450px; left: 750px; animation-delay: -2s;"><img src="img/bg-shapes/Block_Cage.png" alt=""></span>
+        <span class="floating cross" style="top: 1900px; left: 800px; display: none; animation-delay: -6s;"><img src="img/bg-shapes/Block_Cross_3D.png" alt=""></span>
+        <span class="floating atom-cube" style="top: 800px; animation-delay: -3s;"><img src="img/bg-shapes/Atom_Cube.png" alt=""></span>
+        <span class="floating atom-tetra" style="top: 1000px; left: 1300px; animation-delay: -8s;"><img src="img/bg-shapes/Atom_Tetra.png" alt=""></span>
+        <span class="floating fractal" style="top: 2400px; display: none; animation-delay: -12s;"><img src="img/bg-shapes/Fractal_Cube.png" alt=""></span>
+    </div>
+
     <nav>
         <ul class="navlist">
             <li class="navlist-item"><a href="index.html">BAŞ SAHYPA</a></li>
             <li class="navlist-item"><a href="abiturientlar.html">DALAŞGÄR ÜÇIN</a></li>
-            <li class="navlist-item"><a href="meyilnamalar.html">OKUW MEÝILNAMALAR</a></li>
+            <li class="navlist-item"><a href="meyilnamalar.html" class="selected">OKUW MEÝILNAMALAR</a></li>
             <li class="navlist-item"><a href="habarlar.html">HABARLAR</a></li>
             <li class="navlist-item"><a href="about.html">BIZ BARADA</a></li>
             <li class="navlist-item"><a href="contacts.html">HABARLAŞMAK ÜÇIN</a></li>
@@ -48,18 +59,18 @@
         <section class="container">
             <div class="section-inside">
                 <div class="section-head">
-                    <div class="change-btn selected"><a href="#" id="tab1" class="tab">10 aý</a></div>
-                    <div class="change-btn"><a href="#" id="tab2" class="tab">2,5 ýyl</a></div>
+                    <div class="change-btn selected">10 aý</div>
+                    <div class="change-btn">2,5 ýyl</div>
                 </div>
                 <div class="content-dropdown">
                     <div class="dropdown">
-                        <a href="" class="dd">Ugur: Elektronika, radiotehnika we aragatnaşyk ulgamlary.</a>
+                        <p href="" class="dd">Ugur: Elektronika, radiotehnika we aragatnaşyk ulgamlary.</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="18" viewBox="0 0 36 18" fill="none">
                             <path d="M34 2.21899L20.8283 15.284C19.2727 16.827 16.7273 16.827 15.1717 15.284L2 2.21899" stroke="#121212" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <div class="dropdown">
-                        <a href="" class="dd">Ugur: Informatika we hasaplaýyş tehnikasy.</a>
+                        <p href="" class="dd">Ugur: Informatika we hasaplaýyş tehnikasy.</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="18" viewBox="0 0 36 18" fill="none">
                             <path d="M34 2.21899L20.8283 15.284C19.2727 16.827 16.7273 16.827 15.1717 15.284L2 2.21899" stroke="#121212" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
@@ -95,5 +106,20 @@
         </div>
         <section class="bottom"><p>Politehniki orta hünär okuw mekdebi. Ähli hukuklar goralan.</p></section>
     </footer>
+
+    <script>
+    
+        const changeBtn= document.getElementsByClassName('section-inside')[0].getElementsByClassName('change-btn');
+        let selectedItem = document.getElementsByClassName('section-inside')[0].getElementsByClassName('selected')[0];
+    
+        for (let item of changeBtn) {
+            item.addEventListener('click', (e) => {
+                selectedItem.classList.toggle('selected');
+                selectedItem = item;
+                item.classList.toggle('selected');
+            })
+        }
+    
+        </script>
 </body>
 </html>
