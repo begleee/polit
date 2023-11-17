@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Politehnik orta okuw mekdebi</title>
     <!-- Swiper css -->
-    <link rel="stylesheet" href="swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/slick.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -116,27 +116,19 @@
         <div class="container">
             <div class="container-content">
                 <ul class="list">
-                    <li class="list-item selected">Talyp durmuşy</li>
-                    <li class="list-item">Hünär okuw mekdebi</li>
-                    <li class="list-item">Sport</li>
-                    <li class="list-item">Döredijilik</li>
+                    <li class="list-item selected" data-text="Some text 1">Talyp durmuşy</li>
+                    <li class="list-item" data-text="Some text 2">Hünär okuw mekdebi</li>
+                    <li class="list-item" data-text="Some text 3">Sport</li>
+                    <li class="list-item" data-text="Some text 4">Döredijilik</li>
                 </ul>
                 <p class="container-text">
                     Politehniki orta hünär okuw mekdebinde okaýan talyplar sapaklardan daşary öz boş wagtlaryny, sportda, döredijilikde we ylmy ugurdan gyzykly geçirip bilerler. Biziň garamagymyzdan gidýän hünärmenler, köpçülige yolbaşçylyk etmegi, agzybirlik, maksada okgunlylyk ruhunda terbiýelemegi, nazary bilimini we tejribelik endiklerini yzygiderli kämilleşdirmegi, öz hünäri ugrundan toplanan ylmy maglumatlara düşünip, olaryň işinde ulanmagy, zähmeti ylmy nukdaýnazarda guramagy başarmalydyr. Muňa okuwymyzy tamamlap, ýurdumyzyň ähli sebitinde, dürli edara-kärhanalarynda häzirki wagtda ýokary wezipeleri eýeleýän uçurymlary mysal edip bolar.
                 </p>
 
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/main/talyp/talyp.jpg" alt="img2">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/main/talyp/talyp2.jpg" alt="img3">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/main/talyp/talyp3.jpg" alt="img4">
-                        </div>
-                    </div>
+                <div id="slider">
+                    <img src="img/main/talyp/talyp.jpg" alt="img2">
+                    <img src="img/main/talyp/talyp2.jpg" alt="img3">
+                    <img src="img/main/talyp/talyp3.jpg" alt="img4">
                 </div>
             </div>
         </div>
@@ -216,6 +208,7 @@
     <script>
     
     const theme = document.getElementsByClassName('container-content')[0].getElementsByClassName('list-item');
+    const containerText = document.getElementsByClassName('container-text')[0];
     let selectedItem = document.getElementsByClassName('container-content')[0].getElementsByClassName('selected')[0];
 
     for (let item of theme) {
@@ -223,12 +216,13 @@
             selectedItem.classList.toggle('selected');
             selectedItem = item;
             item.classList.toggle('selected');
+            containerText.textContent = item.getAttribute('data-text');
         })
     }
 
     </script>
 
-<script>
+    <script>
     
     const section = document.getElementsByClassName('news-container')[0].getElementsByClassName('news-list-item');
     let newsTheme = document.getElementsByClassName('news-container')[0].getElementsByClassName('selected')[0];
@@ -243,25 +237,22 @@
 
     </script>
 
-    <!-- Swiper -->
-    <script src="swiper/swiper-bundle.js"></script>
+    # Connecting slider scripts
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/slick.min.js"></script>
+    # Initializing slider
     <script>
-        const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
+        $(document).ready(function(){
+            $('#slider').slick({
+                autoplay: true,
+                arrows: false,
+                cssEase: 'ease-in-out',
+                infinite: true,
+                pauseOnFocus: false,
+                pauseOnHover: false
+            });
         });
-  </script>
+    </script>
 
 </body>
 </html>

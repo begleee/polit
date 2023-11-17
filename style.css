@@ -331,10 +331,6 @@ main > img {
     gap: 2vw;
 }
 
-.container-text {
-    max-width: 28vw;
-}
-
 .list {
     list-style: none;
     border-radius: var(--border-rad);
@@ -360,12 +356,6 @@ main > img {
     background-color: var(--blue);
     font-weight: 700;
 }
-
-.swiper {
-    width: 35vw;
-}
-
-
 
 /* NEWS */
 .news {
@@ -736,4 +726,8 @@ section.container {
 
 .information > p {
     font-size: 1.5rem;
+}
+
+#slider {
+    max-width: 25vw;
 }
