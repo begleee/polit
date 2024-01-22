@@ -57,6 +57,11 @@ body {
     -webkit-animation-iteration-count: infinite;
 }
 
+.floating > img {
+    max-width: 17vw;
+    max-height: 17vw;
+}
+
 @media only screen and (max-width: 1750px) {
     .floating > img{
         width: 350px;
@@ -74,7 +79,7 @@ body {
     }
 
     .bg-shapes.mobile > .floating > img{
-        width: 200px;
+        width: 160px;
         height: 200px;
     }
 }
