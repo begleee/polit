@@ -33,15 +33,6 @@ body {
 }
 
 /* BG-SHAPES */
-.bg-shapes {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: -1;
-    
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 .bg-shapes.mobile {
     display: none;
@@ -58,14 +49,16 @@ body {
 }
 
 .floating > img {
-    max-width: 17vw;
-    max-height: 17vw;
+    width: 12vw;
+    height: 12vw;
+    max-width: 12vw;
+    max-height: 12vw;
 }
 
 @media only screen and (max-width: 1750px) {
     .floating > img{
-        width: 350px;
-        height: 350px;
+        max-width: 350px;
+        max-height: 350px;
     }
 }
 
@@ -79,8 +72,11 @@ body {
     }
 
     .bg-shapes.mobile > .floating > img{
-        width: 160px;
-        height: 200px;
+        max-width: 125px;
+        max-height: 125px;
+
+        min-width: 125px;
+        min-height: 125px;
     }
 }
 
