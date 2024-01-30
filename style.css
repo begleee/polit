@@ -105,12 +105,12 @@ body {
 }
 
 header {
-    background-image: url('img/bg.png');
+    background-image: url('img/bg-bright.png');
     background-repeat: no-repeat;
     background-position: 105% -5%;
     background-size: contain;
     position: relative;
-    background-color: var(--blue);
+    background-color: #8CBCFF;
 }
 
 .transition {
@@ -124,7 +124,7 @@ header::after {
     bottom: 0;
     width: 100%;
     height: 20rem;
-    background: linear-gradient(180deg, rgba(18, 86, 195, 0), #b1d2ff 88.85%);
+    background: linear-gradient(180deg, rgba(177, 210, 255, 0.00) 10.79%, #B1D2FF 48.45%, #B1D2FF 121.07%);
 }
 
 /* NAV */
@@ -151,11 +151,20 @@ nav {
     margin-left: 2rem;
 }
 
+a, .navlist-item > a::after, .logo-item > h2, .logo-item > p, .logo-item > h1, .logo-item > h1 > b {
+    color: #2061C8;
+}
+
+.navlist-item > a::after {
+    background-color: #2061C8;
+}
+
 a {
     text-align: left;
     text-decoration: none;
-    text-transform: lowercase;
-    font-size: 1rem;
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 500;
 
     position: relative;
 }
@@ -166,8 +175,7 @@ a {
     left: 0;
     bottom: -6px;
     width: 100%;
-    height: 3px;
-    background-color: #fff;
+    height: 2px;
     border-radius: 5px;
     transform-origin: right;
     transform: scale(0);
@@ -380,7 +388,7 @@ a {
 
 /* HEAD SECTION */
 .some-info {
-    margin-top: clamp(1rem, 10 * (1vw + 1vh) / 2, 16.5rem);
+    margin-top: clamp(1rem, 10 * (1vw + 1vh) / 2, 15rem);
 }
 
 .section-items {
