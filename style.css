@@ -667,6 +667,14 @@ main > img {
     list-style: none;
 }
 
+.last-news {
+    display: none;
+}
+
+.last-news.active {
+    display: block;
+}
+
 .news-list-item {
     font-size: 1.5rem;
     padding: 15px 30px;
