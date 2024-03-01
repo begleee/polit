@@ -667,6 +667,14 @@ main > img {
     list-style: none;
 }
 
+.news-items-list {
+	display: none;
+}
+
+.news-items-list.active {
+	display: block
+}
+
 .last-news {
     display: none;
 }
